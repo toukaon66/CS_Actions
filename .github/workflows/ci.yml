@@ -17,6 +17,9 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: コードフォーマットの検証 (Lint)
+        run: dotnet format --verify-no-changes
+
       - name: プロジェクトのビルド
         run: dotnet build --configuration Release
 
